@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dangky.htm</title>
+    <style>
+        .form-container {
+            border: 1px solid #000;
+            width: 450px;
+            padding: 20px;
+            margin: 20px;
+            font-family: Times New Roman, serif;
+            font-size: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            width: 160px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 220px;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #767676;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .radio-group label {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .button-container {
+            text-align: right;
+            margin-top: 15px;
+            padding-right: 40px;
+        }
+
+        .button-container input[type="submit"] {
+            padding: 5px 15px;
+            font-size: 18px;
+            font-family: Times New Roman, serif;
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #767676;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Enter name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Enter password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label>Enter Gender:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male"> male</label>
+                    <label><input type="radio" name="gender" value="female"> female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Select Country:</label>
+                <select id="country" name="country">
+                    <option value="india">india</option>
+                    <option value="vietnam">vietnam</option>
+                    <option value="japan">japan</option>
+                    <option value="korea">korea</option>
+                    <option value="usa">usa</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" value="register">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
