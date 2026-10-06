@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Profile Cá Nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .profile-card {
+            width: 350px;
+            margin: 50px auto; 
+            padding: 25px; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 12px; 
+            background-color: #ffffff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; 
+            border: 3px solid #007bff; 
+            object-fit: cover;
+        }
+        .name {
+            font-size: 24px; 
+            margin: 15px 0 5px 0;
+            color: #333333;
+        }
+        .job-title {
+            font-size: 16px;
+            color: #007bff; 
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .bio {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .skills-list {
+            list-style: none; 
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+        .skills-list li {
+            display: inline-block; 
+            background-color: #e9ecef; 
+            padding: 6px 12px; 
+            border-radius: 15px; 
+            margin: 4px; 
+            font-size: 13px;
+            color: #495057;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white; 
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.35s ease;
+        }
+        .btn-contact:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <img class="avatar" src="cat.jpg" alt="Ảnh đại diện">
+
+        <h2 class="name">Huỳnh Hữu Huân</h2>
+
+        <p class="job-title">Lập trình viên</p>
+
+        <p class="bio">
+            Chào. Mình là một lập trình viên có niềm yêu thích việc xây dựng giao diện web đẹp mắt và thân thiện với người dùng. Hiện tại mình đang không ngừng học hỏi các công nghệ mới.
+
+        <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+
+        <a href="#" class="btn-contact">Liên hệ</a>
+    </div>
+
+</body>
+</html>
