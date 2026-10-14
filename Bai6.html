@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH OAN TU TI</h2>
+    <button onclick="choi('Da')">Da</button>
+    <button onclick="choi('Giay')">Giay</button>
+    <button onclick="choi('Keo')">Keo</button>
+    <h3 id="ketqua"></h3>
+    <script>
+        function choi(nguoiChoi){
+            let luaChon = ["Da", "Giay", "Keo"];
+            let may = luaChon[Math.floor(Math.random() * 3)];
+            let ketQua;
+
+            if(nguoiChoi === may){
+                ketQua = "Hoa";
+            }else if(
+                (nguoiChoi === "Da" && may === "Keo") ||
+                (nguoiChoi === "Giay" && may === "Da") ||
+                (nguoiChoi === "Keo" && may === "Giay")
+            ){
+                ketQua = "Ban thang!";
+            }else{
+                ketQua = "Ban thua!";
+            }
+
+            document.getElementById("ketqua").innerHTML =
+            "Ban chon: " + nguoiChoi + ". May chon: " + may + ". Ket qua: " + ketQua;
+        }
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>TRO CHOI DOAN SO MAY MAN</h2>
+    <label for="sodoan">Nhap so tu 1 den 10</label>
+    <input type="number" id="sodoan">
+    <br><br>
+    <button onclick="doanSo()">Doan so</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function doanSo(){
+            let sodoan = document.getElementById("sodoan").value;
+            if(sodoan === ""){
+                document.getElementById("ketqua").innerHTML = "Vui long nhap so";
+                return;
+            }
+            sodoan = parseInt(sodoan);
+
+            if(sodoan < 1 || sodoan > 10){
+                document.getElementById("ketqua").innerHTML = "So phai nam trong khoang tu 1 den 10";
+                return;
+            }
+            let somay = Math.floor(Math.random() * 10) + 1;
+            if(sodoan === somay){
+                document.getElementById("ketqua").innerHTML =
+                "Ban doan: " + sodoan + ". May sinh: " + somay + ". Chuc mung, ban da thang!";
+            }else{
+                document.getElementById("ketqua").innerHTML =
+                "Ban doan: " + sodoan + ". May sinh: " + somay + ". Chua may man, thu lai nhe!";
+            }
+        }
+    </script>
+</body>
+</html>

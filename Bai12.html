@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH KIEM TRA NAM NHUAN</h2>
+    <label for="nam">Nhap mot nam</label>
+    <input type="number" id="nam">
+    <br><br>
+    <button onclick="kiemTra()">Kiem tra</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function kiemTra(){
+            let nam = document.getElementById("nam").value;
+            if(nam === ""){
+                document.getElementById("ketqua").innerHTML = "Vui long nhap nam";
+                return;
+            }
+            nam = parseInt(nam);
+            if((nam % 4 === 0 && nam % 100 !== 0) || nam % 400 === 0){
+                document.getElementById("ketqua").innerHTML =
+                "Nam " + nam + " la nam nhuan";
+            }else{
+                document.getElementById("ketqua").innerHTML =
+                "Nam " + nam + " khong phai la nam nhuan";
+            }
+        }
+    </script>
+</body>
+</html>

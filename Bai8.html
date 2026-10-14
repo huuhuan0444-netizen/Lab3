@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH DU DOAN NGHE NGHIEP</h2>
+    <label for="ten">Nhap ten cua ban</label>
+    <input type="text" id="ten">
+    <br><br>
+    <button onclick="duDoan()">Du doan</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function duDoan(){
+            let ten = document.getElementById("ten").value;
+            if(ten === ""){
+                document.getElementById("ketqua").innerHTML = "Vui long nhap ten";
+                return;
+            }
+            let danhSach = [
+                "Bac si",
+                "Giao vien",
+                "Lap trinh vien",
+                "Ca si",
+                "Phi cong",
+                "Dau bep",
+                "Nha khoa hoc",
+                "Hoa si"
+            ];
+            let nghe = danhSach[Math.floor(Math.random() * danhSach.length)];
+            document.getElementById("ketqua").innerHTML =
+            "Chao " + ten + ". Nghe nghiep tuong lai cua ban la: " + nghe;
+        }
+    </script>
+</body>
+</html>

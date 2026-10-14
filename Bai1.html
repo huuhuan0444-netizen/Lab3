@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH KIEM TRA SO CHAN - SO LE</h2>
+    <label for="">Nhap so nguyen</label>
+    <input type="number" id="songuyen">
+    <br><br>
+    <button onclick="kiemtra()">Ket qua</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function kiemtra(){
+            let songuyen = document.getElementById("songuyen").value;
+            if(songuyen % 2 == 0){
+                alert("So " + songuyen + " la so chan");
+            }else{
+                alert("So " + songuyen + " la so le");
+            }
+        }
+    </script>
+</body>
+</html>

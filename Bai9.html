@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH QUAY THUONG MAY MAN</h2>
+    <button onclick="thuong()">Nut quay thuong</button>
+    <h3 id="ketqua"></h3>
+    
+    <script>
+        function thuong(){
+            let danhSach = [
+                "Gau bong",
+                "Iphone 18 pro max",
+                "500k",
+                "Dung cu ve",
+                "Laptop",
+                "Voucher 1 trieu",
+                "Ve xem phim",
+                "Xe full xang"
+            ];
+            let phanthuong = danhSach[Math.floor(Math.random() * danhSach.length)];
+            document.getElementById("ketqua").innerHTML = "Phan thuong: " + phanthuong;
+        }
+    </script>
+</body>
+</html>

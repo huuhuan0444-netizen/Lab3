@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CHUONG TRINH LAC XUC XAC MAY MAN</h2>
+    <button onclick="doan()">Lac xuc xac</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function doan(){
+            let xucxac = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("ketqua").innerHTML = "Ket qua: " + xucxac;
+        }
+    </script>
+</body>
+</html>
