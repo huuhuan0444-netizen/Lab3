@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 12 - findLongestWord</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 12:</h2>
+    <div id="result"></div>
+
+    <script>
+        function findLongestWord(arr) {
+            if (arr.length === 0) return "";
+            let longest = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i].length > longest.length) {
+                    longest = arr[i]; 
+                }
+            }
+            return longest;
+        }
+
+        let res = findLongestWord(["apple", "banana", "cherry", "date"]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = 'findLongestWord(["apple", "banana", "cherry", "date"]) = ' + res;
+    </script>
+</body>
+</html>

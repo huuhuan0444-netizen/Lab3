@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 13 - calculateGrade</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 13:</h2>
+    <div id="result"></div>
+
+    <script>
+        function calculateGrade(arr) {
+            if (arr.length === 0) return "F"; 
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            let avg = sum / arr.length;
+            if (avg >= 90) return "A";  
+            if (avg >= 80) return "B"; 
+            if (avg >= 70) return "C"; 
+            if (avg >= 60) return "D"; 
+            return "F"; 
+        }
+
+        let res = calculateGrade([85, 90, 95]);
+        console.log(res);
+        document.getElementById("result").innerHTML = "calculateGrade([85, 90, 95]) = " + res;
+    </script>
+</body>
+</html>

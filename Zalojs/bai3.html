@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3 - findMin</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 3:</h2>
+    <div id="result"></div>
+
+    <script>
+        function findMin(arr) {
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+
+        let res = findMin([5, 2, 8, 1, 4]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "findMin([5, 2, 8, 1, 4]) = " + res;
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7 - isAscending</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 7:</h2>
+    <div id="result"></div>
+
+    <script>
+        function isAscending(arr) {
+            if (arr.length <= 1) return false; 
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (arr[i] >= arr[i + 1]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        let res = isAscending([1, 2, 3, 5]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "isAscending([1, 2, 3, 5]) = " + res;
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 6 - calculateAverage</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 6:</h2>
+    <div id="result"></div>
+
+    <script>
+        function calculateAverage(arr) {
+            if (arr.length === 0) return 0; 
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        let res = calculateAverage([10, 20, 30, 40, 50]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "calculateAverage([10, 20, 30, 40, 50]) = " + res;
+    </script>
+</body>
+</html>

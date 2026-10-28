@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5 - sumArray</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 5:</h2>
+    <div id="result"></div>
+
+    <script>
+        function sumArray(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        let res = sumArray([1, 2, 3, 4, 5]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "sumArray([1, 2, 3, 4, 5]) = " + res;
+    </script>
+</body>
+</html>

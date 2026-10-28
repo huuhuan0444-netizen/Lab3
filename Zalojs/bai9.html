@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9 - alternateSum</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 9:</h2>
+    <div id="result"></div>
+
+    <script>
+        function alternateSum(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (i % 2 === 0) {
+                    sum += arr[i]; 
+                } else {
+                    sum -= arr[i]; 
+                }
+            }
+            return sum;
+        }
+
+        let res = alternateSum([10, 5, 6, 3]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "alternateSum([10, 5, 6, 3]) = " + res;
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 16 - findPairsWithSum</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 16:</h2>
+    <div id="result"></div>
+
+    <script>
+        function findPairsWithSum(arr, sum) {
+            let pairs = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] + arr[j] === sum) {
+                        pairs.push([arr[i], arr[j]]);
+                    }
+                }
+            }
+            return pairs;
+        }
+
+        let res = findPairsWithSum([1, 2, 3, 4, 5], 5); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "findPairsWithSum([1, 2, 3, 4, 5], 5) = " + JSON.stringify(res);
+    </script>
+</body>
+</html>

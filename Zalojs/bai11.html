@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 11 - filterEvensAndSum</title>
+</head>
+<body>
+    <h2>Kết quả Bài tập 11:</h2>
+    <div id="result"></div>
+
+    <script>
+        function filterEvensAndSum(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    sum += arr[i];
+                }
+            }
+            return sum;
+        }
+
+        let res = filterEvensAndSum([1, 2, 3, 4, 5, 6]); 
+        console.log(res);
+        document.getElementById("result").innerHTML = "filterEvensAndSum([1, 2, 3, 4, 5, 6]) = " + res;
+    </script>
+</body>
+</html>
